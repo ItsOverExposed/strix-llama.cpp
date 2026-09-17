@@ -68,4 +68,4 @@ The inspected Halo Box source already implements parallel, sorted, deduplicated 
 
 ## Maintenance policy
 
-Upstream updates are pulled on demand. No scheduled sync, automatic integration merge, contribution to Halo Box, or deployment is configured. Personal modifications stay in this fork.
+A daily Codex task named Sync Halo Box master checks at 09:00 local time and fast-forwards the GitHub master branch from halo-box/strix-llama.cpp master. It never force-pushes and reports divergence or access failures. It verifies each update and stays quiet when nothing changes. This schedule is managed in Codex, not GitHub Actions. The integration branch is our separate custom version and receives no automatic merges. Builds, deployment and upstream contributions are not automated. Local branches update when explicitly fetched and fast-forwarded; the schedule does not change the working checkout.
